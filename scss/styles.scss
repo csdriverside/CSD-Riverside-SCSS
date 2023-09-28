@@ -1,0 +1,127 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Include functions first
+@import 'bootstrap/scss/functions';
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #fff;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #f7f7f9;
+$gray-300: #eceeef;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #919aa1;
+$gray-700: #55595c;
+$gray-800: #343a40;
+$gray-900: #1a1a1a;
+$black: #000;
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: rgb(209, 21, 21);
+$orange: #fd7e14;
+$yellow: #f0ad4e;
+$green: #4bbf73;
+$teal: #20c997;
+$cyan: #1f9bcf;
+$secondary: $gray-600;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-200;
+$dark: $gray-800;
+$primary: $red;
+$navbar-light-color: rgb(209, 21, 21);
+$navbar-light-hover-color: $gray-900;
+$navbar-light-active-color: $gray-900;
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-rounded: true;
+
+// Required
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+
+@import 'bootstrap/scss/type';
+// @import "bootstrap/scss/images";
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import 'bootstrap/scss/close';
+// @import "bootstrap/scss/toasts";
+@import 'bootstrap/scss/modal'; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+@import 'bootstrap/scss/popover';
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import 'bootstrap/scss/offcanvas'; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+// @import "bootstrap/scss/helpers";
+
+// Utilities
+@import 'bootstrap/scss/utilities/api';
+
+//
+// Custom styles
+//
+
+@import 'icon-list';
+
+body {
+  padding: 1.5rem;
+}
